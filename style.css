@@ -1,0 +1,21 @@
+html {
+    /* Fundo */
+    position: relative;
+    width: relative;
+    height: relative;
+    background: #67002B;
+}
+
+h1 {
+    /* Cabeçalho */
+    width: 1440px;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    background: black;
+    font-family: Verdana;
+    color: white;
+    text-align: center;
+    margin-top: 0px;
+    
+}
