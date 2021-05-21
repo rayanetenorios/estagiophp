@@ -23,7 +23,7 @@
         "User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 YaBrowser/16.3.0.7146 Yowser/2.5 Safari/537.36"]);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    //curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
 
     //$response = curl_exec($ch);
     $response = json_decode(curl_exec($ch));
@@ -31,9 +31,9 @@
 
     //var_dump ($response); //exibição
 
-    foreach ($response->itens as $usuario) {
-        echo "Nome: " . $usuario->login . "</br>";
-        echo "GitHub: " . $usuario->html_url . "</br>";
+    foreach ($response->items as $usuario) {
+        echo "</br>Nome: " . $usuario->login;
+        echo "</br>GitHub: " . $usuario->html_url . "</br>";
     };
 
 
