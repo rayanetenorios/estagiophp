@@ -12,18 +12,14 @@
 
         <h1>Desenvolvedores GitHub</h1>
 
-        <form 
-            method="POST" action="config.php">
-            <input type="text" name="pesquisar" placeholder="Digite aqui o usuário">
+        <form method="POST" action= "config.php">
+            <input type="text" name= "pesquisa" placeholder="Digite aqui a sua pesquisa...">
             <input type="submit" value="Buscar no GitHub">
         </form>
 
         <img src = "Octocat.png" title = "Octocat GitHub" style="float:right;width:200px">
 
-        <?php
-
-        
-        ?>
+    
     </body>
 </html>
 
