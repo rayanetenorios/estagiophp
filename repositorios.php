@@ -10,8 +10,8 @@
 <body>
     <?php
 
-    $usuario= $_POST['login'];
-        echo 'Repositórios de: '. $usuario .'</br>';
+    $usuario= $_GET['login'];
+        echo 'Repositórios de: '. $usuario .'</br>'; 
 
     $ch = curl_init(); //inicia a curl
     curl_setopt($ch, CURLOPT_URL, "https://api.github.com/users/". $usuario ."/repos");
@@ -24,14 +24,14 @@
     $repositorios = json_decode(curl_exec($ch)); //exibe organizado
     curl_close($ch); //finaliza a curl
 
-    var_dump ($repositorios); //exibição primária
+    //var_dump ($repositorios); //exibição primária
 
-    /*foreach ($repositorios as $repos_user) {
+    foreach ($repositorios as $repos_user) {
         echo "</br>Nome do Repositório: " . $repos_user->name;
-        echo "</br>Endereço no GitHub: " . $repos_user->html_url;
+        echo "</br>Endereço no GitHub: " . "<a href= '{$repos_user->html_url}'>" . $repos_user->html_url . "</a>";
         echo "</br>Linguagem: " . $repos_user->language . "</br>";
     };
-*/
+
     ?>
 </body>
 

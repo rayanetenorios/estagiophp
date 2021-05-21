@@ -25,9 +25,8 @@
     curl_close($ch); //finaliza a curl
 
     //var_dump ($response); //exibição primária
-
     foreach ($response->items as $usuario) {
-        echo "</br>Nome: " . "<a href= 'repositorios.php'>" . $usuario->login . "</a>";
+        echo "</br>Nome: " . "<a href= 'repositorios.php?login={$usuario->login}'>" . $usuario->login . "</a>";
         echo "</br>GitHub: " . $usuario->html_url . "</br>";
     };
 
