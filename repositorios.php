@@ -11,7 +11,9 @@
     <?php
 
     $usuario= $_GET['login'];
-        echo 'Repositórios de: '. $usuario .'</br>'; 
+        echo '<br><img src="{owner{avatar_url}}"><br>';
+        echo 'Repositórios de '. $usuario .'</br>';
+        
 
     $ch = curl_init(); //inicia a curl
     curl_setopt($ch, CURLOPT_URL, "https://api.github.com/users/". $usuario ."/repos");
