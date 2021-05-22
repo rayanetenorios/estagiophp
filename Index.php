@@ -11,7 +11,7 @@
     <body>
 
         <h1>Desenvolvedores GitHub</h1>
-        <img src= Octocat.png>
+        <img class= octocat src= images/Octocat.png>
         <h2>Pesquise usuários e explore seus repositórios do GitHub.</h2>
 
         <form method="POST" action= "config.php">

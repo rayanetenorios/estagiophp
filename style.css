@@ -8,8 +8,8 @@ html {
 
 h1 {
     /* Cabeçalho */
-    width: relative;
-    height: 80px;
+    width: absolute;
+    height: 70px;
     left: 0px;
     top: 0px;
     background: black;
@@ -19,6 +19,7 @@ h1 {
     margin-top: 0px; 
     padding-top: 30px;
     padding-left: 30px;
+    font-size: 30px;
 }
 
 .campo {
@@ -29,9 +30,9 @@ h1 {
     left: 256px;
     top: 427px;
 
-    font-family: Roboto;
+    font: Roboto;
     font-style: normal;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 18px;
     line-height: 21px;
     color: #AC5C51;
@@ -49,7 +50,8 @@ h1 {
     height: 38px;
     left: 634px;
     top: 441px;
-    
+    font: Roboto;
+
     background: #7CBAE6;
     border-radius: 50px;
 }
@@ -62,7 +64,7 @@ h2 {
     left: 256px;
     top: 300px;
 
-    font-family: Roboto;
+    font-family: sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 36px;
@@ -71,10 +73,79 @@ h2 {
     color: #7CBAE6;
 }
 
-img {   /*Octocat*/
+.octocat {   /*Octocat*/
     position: absolute;
     width: 438px;
     height: 364px;
     left: 746px;
     top: 220px;
+}
+
+img {
+    position: relative;
+    width: 234px;
+    height: 234px;
+    left: 30px;
+    top: 30px;
+}
+.avisos {   /*AVISOS*/
+    position: absolute;
+    width: 438px;
+    height: 364px;
+    left: 700px;
+    top: 170px;
+}
+h3 {
+    /* AVISOS */
+    position: absolute;
+    width: 460px;
+    height: 84px;
+    left: 300px;
+    top: 250px;
+
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #7CBAE6;
+}
+h4 { /*  RESULTADOS  */
+    width: 500px;
+    height: 38px;
+    left: auto;
+    top: auto;
+
+    background: #F4CAB1;
+    border-radius: 50px;
+
+    font-family: sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    
+    margin: 1px; 
+    padding-top: 5px;
+    padding-left: 30px;
+    font-size: 14px;
+}
+
+h5 { /*  REPOSITÓRIOS  */
+    width: 900px;
+    height: 55px;
+    left: auto;
+    top: auto;
+
+    background: #F4CAB1;
+    border-radius: 30px;
+
+    font-family: sans-serif;
+    font: normal;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    
+    margin: 1px; 
+    padding-top: 5px;
+    padding-left: 30px;
+    font-size: 14px;
 }

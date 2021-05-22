@@ -11,7 +11,7 @@
     <?php
 
     $pesquisa= $_POST['pesquisa'];
-        echo 'Resultado da Pesquisa: '.$pesquisa.'</br>';
+        echo '<h1>Você pesquisou por: '.$pesquisa.'</h1></br>';
 
     $ch = curl_init(); //inicia a curl
     curl_setopt($ch, CURLOPT_URL, "https://api.github.com/search/users?q=".$pesquisa);
@@ -26,8 +26,8 @@
 
     //var_dump ($response); //exibição primária
     foreach ($response->items as $usuario) {
-        echo "</br>Nome: " . "<a href= 'repositorios.php?login={$usuario->login}'>" . $usuario->login . "</a>";
-        echo "</br>GitHub: " . $usuario->html_url . "</br>";
+        echo "</br><h4>Nome: <a href= 'repositorios.php?login={$usuario->login}'>" . $usuario->login . "</a>";
+        echo "</br>GitHub: " . $usuario->html_url . "</h4></br>";
     };
 
     ?>

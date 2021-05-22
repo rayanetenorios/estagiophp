@@ -11,8 +11,7 @@
     <?php
 
     $usuario= $_GET['login'];
-        echo '<br><img src="{owner{avatar_url}}"><br>';
-        echo 'Repositórios de '. $usuario .'</br>';
+        echo '<h1>Repositórios de '. $usuario .'</br></h1>';
         
 
     $ch = curl_init(); //inicia a curl
@@ -26,12 +25,21 @@
     $repositorios = json_decode(curl_exec($ch)); //exibe organizado
     curl_close($ch); //finaliza a curl
 
+    /*
+    foreach ($repositorios->owner as $perfil) {
+        //echo "<img src= $perfil->avatar_url></br>";
+        echo "</br>Url da imagem: " . $perfil->avatar_url;
+    }; */
+
     //var_dump ($repositorios); //exibição primária
 
-    foreach ($repositorios as $repos_user) {
-        echo "</br>Nome do Repositório: " . $repos_user->name;
+    if (empty($repositorios)) {
+        echo "</br><h3>Este usuário não possui repositórios.</h3>";
+        echo "<img class= avisos src= images/mafalda-triste.png>"; die;
+    } else foreach ($repositorios as $repos_user) {
+        echo "</br><h5><b>Nome do Repositório: </b>" . $repos_user->name;
         echo "</br>Endereço no GitHub: " . "<a href= '{$repos_user->html_url}'>" . $repos_user->html_url . "</a>";
-        echo "</br>Linguagem: " . $repos_user->language . "</br>";
+        echo "</br>Linguagem: " . $repos_user->language . "</h5></br>";
     };
 
     ?>
